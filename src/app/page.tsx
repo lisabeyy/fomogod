@@ -114,7 +114,7 @@ export default function Home() {
               <button type="submit" className="fomogod-heading fomogod-bg-yellow text-black px-4 py-2 rounded-full shadow hover:fomogod-bg-green transition" disabled={submitted}>Join Waitlist</button>
             </form>
             {error && <div className="text-red-600 fomogod-body mt-2">{error}</div>}
-            {submitted && <div className="text-green-700 fomogod-body mt-2">You're on the list!</div>}
+            {submitted && <div className="text-green-700 fomogod-body mt-2">You&apos;re on the list!</div>}
             <button onClick={() => setShowModal(false)} className="mt-4 fomogod-body underline text-sm text-gray-500 hover:text-[#ededed]">Close</button>
           </div>
         </div>

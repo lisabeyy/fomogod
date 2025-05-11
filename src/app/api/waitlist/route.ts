@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       await fs.writeFile(WAITLIST_PATH, JSON.stringify(waitlist, null, 2));
     }
     return NextResponse.json({ success: true });
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: "Server error." }, { status: 500 });
   }
 } 
