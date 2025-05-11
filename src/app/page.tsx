@@ -54,7 +54,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#00e676]/20 via-[#ffe600]/10 to-white p-4 ${isDarkTheme ? 'dark-theme' : ''}`}>
+    <div className={`min-h-screen flex flex-col items-center justify-center bg-[#072c0a] p-4 ${isDarkTheme ? 'dark-theme' : ''}`}>
       {/* Dark theme toggle button */}
       <button
         onClick={() => setIsDarkTheme(!isDarkTheme)}
@@ -72,17 +72,20 @@ export default function Home() {
         </div>
       </div>
       {/* Main content */}
-      <div className="flex flex-col md:flex-row items-center gap-10 bg-white/80 rounded-3xl shadow-xl p-8 max-w-4xl w-full">
+      <div className="flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full">
         <div className="flex-shrink-0">
-          <Image src="/fomogod.png" alt="FOMOGOD" width={220} height={220} className="rounded-2xl shadow-lg border-4 border-[#00e676]" priority />
+          <Image src="/fomogod2.png" alt="FOMOGOD" width={500} height={500} className="rounded-2xl shadow-lg" priority />
         </div>
         <div className="flex-1 flex flex-col gap-6 fomogod-body">
           <h1 className="fomogod-heading text-4xl md:text-5xl fomogod-green mb-2">Welcome to FOMOGOD</h1>
           <h2 className="fomogod-heading text-2xl fomogod-yellow mb-4">The God of FOMO on Taraxa</h2>
+          <p className="fomogod-body text-lg text-[#ededed]">
+            We&apos;re building a validator node on the Taraxa network, but with a twist:
+          </p>
           <ul className="list-disc pl-5 text-lg text-[#222]">
-            <li>Every reward generated is used to <span className="fomogod-green font-bold">buy back and burn $FOMOGOD</span>, forever reducing supply and increasing scarcity.</li>
-            <li>A custom smart contract automates the process for <span className="fomogod-yellow font-bold">full transparency</span>.</li>
-            <li>And yes — a <span className="fomogod-green font-bold">no-KYC staking gateway</span> is coming, so even US users can delegate safely and easily.</li>
+            <li>Every reward generated will be used to <span className="fomogod-green font-bold">buy back and burn $FOMOGOD</span>, forever reducing supply and increasing scarcity.</li>
+            <li>A custom smart contract will automate the entire process for <span className="fomogod-yellow font-bold">full transparency</span>.</li>
+            <li>And yes! We&apos;re also developing a <span className="fomogod-green font-bold">no-KYC staking gateway</span>, so even US users can delegate to our node safely and easily.</li>
           </ul>
           <div className="flex gap-4 mt-4">
             <a href="https://t.me/FomoGod_on_Taraxa" target="_blank" rel="noopener noreferrer" className="fomogod-body border-2 border-[#00e676] text-[#00e676] px-4 py-2 rounded-full font-bold hover:bg-[#00e676] hover:text-black transition">Telegram</a>
