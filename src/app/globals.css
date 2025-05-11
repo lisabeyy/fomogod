@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --fomogod-green: #00e676;
+  --fomogod-yellow: #ffe600;
+  --font-orbitron: var(--font-orbitron);
+  --font-inter: var(--font-inter);
 }
 
 @theme inline {
@@ -23,4 +27,61 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.fomogod-heading {
+  font-family: var(--font-orbitron), Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.fomogod-body {
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+.fomogod-green {
+  color: var(--fomogod-green);
+}
+.fomogod-yellow {
+  color: var(--fomogod-yellow);
+}
+.fomogod-bg-green {
+  background: var(--fomogod-green);
+}
+.fomogod-bg-yellow {
+  background: var(--fomogod-yellow);
+}
+
+/* Dark theme for FOMOGOD landing page */
+.dark-theme {
+  background: linear-gradient(to bottom right, #0a0a0a, #1a1a1a, #2a2a2a, #3a3a3a, #4a4a4a, #5a5a5a, #6a6a6a, #7a7a7a, #8a8a8a, #9a9a9a, #aa9a00, #baaa00, #caba00, #daca00, #eada00, #faea00);
+  color: #ededed;
+}
+.dark-theme .fomogod-green {
+  color: #00e676;
+}
+.dark-theme .fomogod-yellow {
+  color: #ffe600;
+}
+.dark-theme .fomogod-bg-green {
+  background: #00e676;
+}
+.dark-theme .fomogod-bg-yellow {
+  background: #ffe600;
+}
+.dark-theme .bg-white\/80 {
+  background: rgba(26, 26, 26, 0.8);
+}
+.dark-theme .text-\[\#222\] {
+  color: #ededed;
+}
+.dark-theme .border-\[\#00e676\] {
+  border-color: #00e676;
+}
+.dark-theme .focus\:ring-\[\#ffe600\]:focus {
+  --tw-ring-color: #ffe600;
+}
+.dark-theme .text-gray-500 {
+  color: #a0a0a0;
+}
+.dark-theme .hover\:text-black:hover {
+  color: #ededed;
 }
