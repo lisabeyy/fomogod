@@ -91,13 +91,22 @@ export default function Home() {
             <a href="https://t.me/FomoGod_on_Taraxa" target="_blank" rel="noopener noreferrer" className="fomogod-body border-2 border-[#00e676] text-[#00e676] px-4 py-2 rounded-full font-bold hover:bg-[#00e676] hover:text-black transition">Telegram</a>
             <a href="https://x.com/FOMOGOD_ON_TARA" target="_blank" rel="noopener noreferrer" className="fomogod-body border-2 border-[#ffe600] text-[#ffe600] px-4 py-2 rounded-full font-bold hover:bg-[#ffe600] hover:text-black transition">Twitter</a>
           </div>
-          <button onClick={() => setShowModal(true)} className="mt-6 fomogod-heading fomogod-bg-green text-black px-8 py-3 rounded-full text-xl shadow-lg hover:fomogod-bg-yellow hover:text-[#222] transition">Stake Coming Soon</button>
+          <button
+            type="button"
+            onClick={() => {
+              console.log('Button clicked');
+              setShowModal(true);
+            }}
+            className="mt-6 fomogod-heading fomogod-bg-green text-black px-8 py-3 rounded-full text-xl shadow-lg hover:fomogod-bg-yellow hover:text-[#222] transition cursor-pointer relative z-10"
+          >
+            Stake Coming Soon
+          </button>
         </div>
       </div>
       {/* Modal for waitlist */}
       {showModal && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-[#1a1a1a] rounded-2xl p-8 shadow-2xl max-w-sm w-full flex flex-col items-center">
+          <div className="bg-[#1a1a1a] rounded-2xl p-8 shadow-2xl max-w-sm w-full flex flex-col items-center relative z-50">
             <h3 className="fomogod-heading text-2xl fomogod-green mb-2">Get Notified!</h3>
             {submitted ? (
               <p className="fomogod-body text-center mb-4 text-[#ededed]">You are already on the waitlist!</p>
@@ -118,7 +127,12 @@ export default function Home() {
             </form>
             {error && <div className="text-red-600 fomogod-body mt-2">{error}</div>}
             {submitted && <div className="text-green-700 fomogod-body mt-2">You&apos;re on the list!</div>}
-            <button onClick={() => setShowModal(false)} className="mt-4 fomogod-body underline text-sm text-gray-500 hover:text-[#ededed]">Close</button>
+            <button
+              onClick={() => setShowModal(false)}
+              className="mt-4 fomogod-body underline text-sm text-gray-500 hover:text-[#ededed] cursor-pointer"
+            >
+              Close
+            </button>
           </div>
         </div>
       )}
