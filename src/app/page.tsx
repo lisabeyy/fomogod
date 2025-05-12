@@ -66,8 +66,7 @@ export default function Home() {
       <div className="w-full flex flex-col sm:flex-row justify-between items-center max-w-3xl mb-6">
         <div className="fomogod-heading text-2xl fomogod-green mb-2 sm:mb-0">$FOMOGOD</div>
         <div className="flex items-center gap-4">
-          <span className="fomogod-heading text-lg fomogod-yellow">{tokenPrice}</span>
-          <span className="fomogod-heading text-lg fomogod-yellow">MC: {marketCap}</span>
+
           <a href={dexUrl} target="_blank" rel="noopener noreferrer" className="fomogod-body underline text-sm fomogod-green hover:fomogod-yellow transition">View on DEX</a>
         </div>
       </div>
