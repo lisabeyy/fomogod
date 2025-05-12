@@ -8,7 +8,6 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   useEffect(() => {
     const storedEmail = localStorage.getItem("waitlistEmail");
@@ -18,8 +17,7 @@ export default function Home() {
   }, []);
 
   // Placeholder for token price fetch
-  const tokenPrice = "N/A";
-  const marketCap = "N/A";
+
   const dexUrl = "https://fomo.biz/token/0x4AFCfbf183c743362cEE976e5e94a3E5FB729935";
 
   const handleSubmit = async (e: React.FormEvent) => {
