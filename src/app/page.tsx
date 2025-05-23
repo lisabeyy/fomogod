@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
@@ -25,6 +27,7 @@ export default function Home() {
   const [showStakeModal, setShowStakeModal] = useState(false);
   const [showUndelegateModal, setShowUndelegateModal] = useState(false);
   const [showCancelUndelegateModal, setShowCancelUndelegateModal] = useState(false);
+
   const [showConfirmUndelegateModal, setShowConfirmUndelegateModal] = useState(false);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -56,7 +59,7 @@ export default function Home() {
         setIsLoadingStake(true);
         setStakeError(null);
 
-        const provider = new ethers.BrowserProvider(walletClient);
+        const provider = new ethers.BrowserProvider(walletClient as any);
         const signer = await provider.getSigner();
 
         console.log("Fetching stake amount...");
@@ -161,7 +164,7 @@ export default function Home() {
       }
 
       setIsUndelegating(true);
-      const provider = new ethers.BrowserProvider(walletClient);
+      const provider = new ethers.BrowserProvider(walletClient as any);
       const signer = await provider.getSigner();
 
       await undelegateFromFomogod(FOMOGOD_VALIDATOR, delegatedAmount, signer);
@@ -185,7 +188,7 @@ export default function Home() {
       }
 
       setIsCancelingUndelegate(true);
-      const provider = new ethers.BrowserProvider(walletClient);
+      const provider = new ethers.BrowserProvider(walletClient as any);
       const signer = await provider.getSigner();
 
       await cancelUndelegate(FOMOGOD_VALIDATOR, signer);

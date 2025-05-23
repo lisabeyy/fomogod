@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ethers } from 'ethers';
 
 const DPOS_CONTRACT_ADDRESS = '0x00000000000000000000000000000000000000fe';
@@ -344,6 +345,7 @@ export async function delegateToFomogod(
     if (error instanceof Error) {
       // Add more detailed error information
       const errorMessage = error.message;
+   
       const errorData = (error as any).data;
       const errorCode = (error as any).code;
       console.error("Detailed error info:", {
