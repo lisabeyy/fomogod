@@ -249,7 +249,7 @@ export default function Home() {
             <ul className="list-disc pl-5 text-base sm:text-lg md:text-xl text-white space-y-2 md:space-y-3">
               <li>Every reward generated will be used to <span className="fomogod-green font-bold">buy back and burn $FOMOGOD</span>, forever reducing supply and increasing scarcity.</li>
               <li>A custom smart contract will automate the entire process for <span className="fomogod-yellow font-bold">full transparency</span>.</li>
-              <li>And yes! We&apos;re also developing a <span className="fomogod-green font-bold">no-KYC staking gateway</span>, so even US users can delegate to our node safely and easily.</li>
+              <li>And yes! We&apos;re also developing a <span className="fomogod-green font-bold">no-KYC staking gateway</span>, so even U.S. users can delegate to our node safely and easily.</li>
             </ul>
             <div className="flex flex-wrap gap-2 sm:gap-4 mt-2 md:mt-4">
               <a
