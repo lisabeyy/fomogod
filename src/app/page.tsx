@@ -228,22 +228,23 @@ export default function Home() {
           </div>
         )}
 
-        {/* Token price and DEX link */}
-        <div className="w-full flex flex-col sm:flex-row justify-between items-center max-w-3xl mb-6 relative z-10">
-          <div className="fomogod-heading text-2xl fomogod-green mb-2 sm:mb-0">$FOMOGOD</div>
+        {/* Header with logo and wallet connect */}
+        <div className="w-full max-w-7xl flex justify-between items-center mb-8">
+          <div className="fomogod-heading text-3xl fomogod-green">$FOMOGOD</div>
+          <WalletConnect />
         </div>
+
         {/* Main content */}
-        <div className="flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full relative z-10">
           <div className="flex-shrink-0">
             <Image src="/fomogod2.png" alt="FOMOGOD" width={500} height={500} className="rounded-2xl shadow-lg" priority />
           </div>
-          <div className="flex-1 flex flex-col gap-6 fomogod-body">
-            <h1 className="fomogod-heading text-4xl md:text-5xl text-white mb-2">Welcome to FOMOGOD</h1>
-            <h2 className="fomogod-heading text-2xl text-white mb-4">The God of FOMO on Taraxa</h2>
-            <p className="fomogod-body text-lg text-white">
-              We&apos;re building a validator node on the Taraxa network, but with a twist:
+          <div className="flex-1 flex flex-col gap-6 fomogod-body max-w-2xl">
+            <h2 className="fomogod-heading text-2xl md:text-3xl text-white mb-4">The God of FOMO on Taraxa</h2>
+            <p className="fomogod-body text-lg md:text-xl text-white">
+              We&apos;re running a validator node on the Taraxa network, but with a twist:
             </p>
-            <ul className="list-disc pl-5 text-lg text-white">
+            <ul className="list-disc pl-5 text-lg md:text-xl text-white space-y-3">
               <li>Every reward generated will be used to <span className="fomogod-green font-bold">buy back and burn $FOMOGOD</span>, forever reducing supply and increasing scarcity.</li>
               <li>A custom smart contract will automate the entire process for <span className="fomogod-yellow font-bold">full transparency</span>.</li>
               <li>And yes! We&apos;re also developing a <span className="fomogod-green font-bold">no-KYC staking gateway</span>, so even US users can delegate to our node safely and easily.</li>
