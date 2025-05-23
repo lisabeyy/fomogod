@@ -218,7 +218,15 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <WalletConnect />
+      <div className="fixed top-0 left-0 right-0 bg-[#041813] z-50 px-4 py-3">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          <div className="fomogod-heading text-2xl fomogod-green">$FOMOGOD</div>
+          <div className="w-auto">
+            <WalletConnect />
+          </div>
+        </div>
+      </div>
+
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#041813] p-4 relative">
         {/* Success Message */}
         {showSuccess && (
@@ -228,100 +236,94 @@ export default function Home() {
           </div>
         )}
 
-        {/* Header with logo and wallet connect */}
-        <div className="w-full max-w-7xl flex justify-between items-center mb-8">
-          <div className="fomogod-heading text-3xl fomogod-green">$FOMOGOD</div>
-          <WalletConnect />
-        </div>
-
-        {/* Main content */}
-        <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full relative z-10">
-          <div className="flex-shrink-0">
-            <Image src="/fomogod2.png" alt="FOMOGOD" width={500} height={500} className="rounded-2xl shadow-lg" priority />
+        {/* Main content - add top padding to account for fixed header */}
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-7xl w-full relative z-10 px-4 sm:px-0 mt-16">
+          <div className="flex-shrink-0 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px]">
+            <Image src="/fomogod2.png" alt="FOMOGOD" width={500} height={500} className="rounded-2xl shadow-lg w-full h-auto" priority />
           </div>
-          <div className="flex-1 flex flex-col gap-6 fomogod-body max-w-2xl">
-            <h2 className="fomogod-heading text-2xl md:text-3xl text-white mb-4">The God of FOMO on Taraxa</h2>
-            <p className="fomogod-body text-lg md:text-xl text-white">
+          <div className="flex-1 flex flex-col gap-4 md:gap-6 fomogod-body max-w-2xl">
+            <h2 className="fomogod-heading text-xl sm:text-2xl md:text-3xl text-white mb-2 md:mb-4">The God of FOMO on Taraxa</h2>
+            <p className="fomogod-body text-base sm:text-lg md:text-xl text-white">
               We&apos;re running a validator node on the Taraxa network, but with a twist:
             </p>
-            <ul className="list-disc pl-5 text-lg md:text-xl text-white space-y-3">
+            <ul className="list-disc pl-5 text-base sm:text-lg md:text-xl text-white space-y-2 md:space-y-3">
               <li>Every reward generated will be used to <span className="fomogod-green font-bold">buy back and burn $FOMOGOD</span>, forever reducing supply and increasing scarcity.</li>
               <li>A custom smart contract will automate the entire process for <span className="fomogod-yellow font-bold">full transparency</span>.</li>
               <li>And yes! We&apos;re also developing a <span className="fomogod-green font-bold">no-KYC staking gateway</span>, so even US users can delegate to our node safely and easily.</li>
             </ul>
-            <div className="flex gap-4 mt-4">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mt-2 md:mt-4">
               <a
                 href="https://t.me/FomoGod_on_Taraxa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fomogod-body border-2 border-[#00e676] text-[#00e676] px-4 py-2 rounded-full font-bold hover:bg-[#00e676] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2"
+                className="fomogod-body border-2 border-[#00e676] text-[#00e676] px-3 sm:px-4 py-2 rounded-full font-bold hover:bg-[#00e676] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2 text-sm sm:text-base"
               >
-                <FaTelegram className="text-xl" />
+                <FaTelegram className="text-lg sm:text-xl" />
                 Telegram
               </a>
               <a
                 href="https://x.com/FOMOGOD_ON_TARA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fomogod-body border-2 border-[#ffe600] text-[#ffe600] px-4 py-2 rounded-full font-bold hover:bg-[#ffe600] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2"
+                className="fomogod-body border-2 border-[#ffe600] text-[#ffe600] px-3 sm:px-4 py-2 rounded-full font-bold hover:bg-[#ffe600] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2 text-sm sm:text-base"
               >
-                <FaTwitter className="text-xl" />
+                <FaTwitter className="text-lg sm:text-xl" />
                 Twitter
               </a>
               <a
                 href={dexUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fomogod-body border-2 border-[#00e676] text-[#00e676] px-4 py-2 rounded-full font-bold hover:bg-[#00e676] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2"
+                className="fomogod-body border-2 border-[#00e676] text-[#00e676] px-3 sm:px-4 py-2 rounded-full font-bold hover:bg-[#00e676] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2 text-sm sm:text-base"
               >
-                <FaChartLine className="text-xl" />
+                <FaChartLine className="text-lg sm:text-xl" />
                 View on DEX
               </a>
               <a
                 href="https://community.taraxa.io/staking/0xa6488E0Dd259c48e0d6c0380fF5b08f6ae02a641"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fomogod-body border-2 border-[#ffe600] text-[#ffe600] px-4 py-2 rounded-full font-bold hover:bg-[#ffe600] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2"
+                className="fomogod-body border-2 border-[#ffe600] text-[#ffe600] px-3 sm:px-4 py-2 rounded-full font-bold hover:bg-[#ffe600] hover:text-black transition-all duration-300 cursor-pointer relative z-10 flex items-center gap-2 text-sm sm:text-base"
               >
-                <FaServer className="text-xl" />
+                <FaServer className="text-lg sm:text-xl" />
                 View Node
               </a>
             </div>
-            <div className="flex flex-col gap-4 mt-6">
+            <div className="flex flex-col gap-3 md:gap-4 mt-4 md:mt-6">
               {isLoadingStake ? (
-                <div className="fomogod-heading text-xl text-[#00e676]">
+                <div className="fomogod-heading text-lg sm:text-xl text-[#00e676]">
                   Loading stake amount...
                 </div>
               ) : stakeError ? (
-                <div className="fomogod-heading text-xl text-red-500">
+                <div className="fomogod-heading text-lg sm:text-xl text-red-500">
                   Error: {stakeError}
                 </div>
               ) : (
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 md:gap-4">
                   {Number(delegatedAmount) > 0 && (
-                    <div className="fomogod-heading text-xl text-[#00e676]">
+                    <div className="fomogod-heading text-lg sm:text-xl text-[#00e676]">
                       Currently Staked: {delegatedAmount} $TARA
                     </div>
                   )}
 
                   {/* Show undelegation status if there is one */}
                   {undelegationStatus?.hasUndelegation && (
-                    <div className="bg-[#2a2a2a] p-4 rounded-xl">
-                      <h4 className="fomogod-heading text-lg text-[#ffe600] mb-2">Undelegation in Progress</h4>
-                      <p className="text-[#ededed]">
+                    <div className="bg-[#2a2a2a] p-3 sm:p-4 rounded-xl">
+                      <h4 className="fomogod-heading text-base sm:text-lg text-[#ffe600] mb-2">Undelegation in Progress</h4>
+                      <p className="text-[#ededed] text-sm sm:text-base">
                         Undelegation Request for {undelegationStatus.amount} $TARA has been registered and will be confirmed at block {undelegationStatus.unlockBlock} (~{formatTimeRemaining(undelegationStatus.estimatedUnlockTime as Date)})
                       </p>
                       {undelegationStatus.canConfirm ? (
                         <button
                           onClick={() => setShowConfirmUndelegateModal(true)}
-                          className="mt-4 fomogod-heading bg-[#00e676] text-black px-6 py-3 rounded-full shadow hover:bg-[#ffe600] hover:text-[#222] transition-all duration-300"
+                          className="mt-3 sm:mt-4 fomogod-heading bg-[#00e676] text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow hover:bg-[#ffe600] hover:text-[#222] transition-all duration-300 text-sm sm:text-base"
                         >
                           Confirm Undelegation
                         </button>
                       ) : (
                         <button
                           onClick={() => setShowCancelUndelegateModal(true)}
-                          className="mt-4 fomogod-heading bg-[#ffe600] text-black px-6 py-3 rounded-full shadow hover:bg-[#00e676] hover:text-white transition-all duration-300"
+                          className="mt-3 sm:mt-4 fomogod-heading bg-[#ffe600] text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow hover:bg-[#00e676] hover:text-white transition-all duration-300 text-sm sm:text-base"
                         >
                           Cancel Undelegation
                         </button>
@@ -332,7 +334,7 @@ export default function Home() {
                   {/* Always show stake button */}
                   <button
                     onClick={() => setShowStakeModal(true)}
-                    className="fomogod-heading bg-[#00e676] text-black px-8 py-3 rounded-full text-xl shadow-lg hover:bg-[#ffe600] hover:text-[#222] transition-all duration-300 cursor-pointer relative z-10"
+                    className="fomogod-heading bg-[#00e676] text-black px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl shadow-lg hover:bg-[#ffe600] hover:text-[#222] transition-all duration-300 cursor-pointer relative z-10"
                   >
                     {Number(delegatedAmount) > 0 ? "Stake More $TARA" : "Stake $TARA"}
                   </button>
@@ -341,7 +343,7 @@ export default function Home() {
                   {Number(delegatedAmount) > 0 && !undelegationStatus?.hasUndelegation && (
                     <button
                       onClick={() => setShowUndelegateModal(true)}
-                      className="fomogod-heading bg-[#ffe600] text-black px-8 py-3 rounded-full text-xl shadow-lg hover:bg-[#00e676] hover:text-white transition-all duration-300 cursor-pointer relative z-10"
+                      className="fomogod-heading bg-[#ffe600] text-black px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl shadow-lg hover:bg-[#00e676] hover:text-white transition-all duration-300 cursor-pointer relative z-10"
                     >
                       Undelegate $TARA
                     </button>
